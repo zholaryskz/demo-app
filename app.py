@@ -12,6 +12,9 @@ def index():
 @app.get("/health")
 def health():
     return jsonify(status="ok")
+@app.get("/version")
+def version():
+    return jsonify(version="1.1.0")
 @app.get("/db-check")
 def db_check():
     try:
