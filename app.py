@@ -11,7 +11,7 @@ def index():
     return jsonify(message="Demo app is running")
 @app.get("/health")
 def health():
-    return jsonify(status="ok")
+    return jsonify(status="broken"), 500
 @app.get("/version")
 def version():
     return jsonify(version="1.1.0")
